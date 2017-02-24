@@ -10,4 +10,4 @@ import Emojize
 
 ## Install
 
-Add `oleander/Emojize` to your `Package.swift` file.
+Add `oleander/Emojize` to your `Package.swift` file or install it via CocoaPods
