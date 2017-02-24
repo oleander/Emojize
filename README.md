@@ -7,3 +7,7 @@ import Emojize
 
 "This is a :car:".emojifyed() // => "This is a 🚗"
 ```
+
+## Install
+
+Add `oleander/Emojize` to your `Package.swift` file.
