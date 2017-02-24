@@ -1,5 +1,5 @@
-import FootlessParser
 import SwiftyJSON
+import FootlessParser
 import Cocoa
 import Files
 
