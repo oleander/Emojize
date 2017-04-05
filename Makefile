@@ -9,6 +9,6 @@ tag:
 release: tag
 package:
 	rm Package.swift
-	mv Package.test.swift Package.swift
+	mv .Package.test.swift Package.swift
 ci: package test
 
