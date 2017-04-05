@@ -1,6 +1,6 @@
 import SwiftyJSON
 import FootlessParser
-import Cocoa
+import AppKit
 import Files
 
 private typealias P<T> = Parser<Character, T>
