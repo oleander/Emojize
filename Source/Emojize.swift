@@ -5,10 +5,10 @@ import Files
 
 private typealias P<T> = Parser<Character, T>
 
-let fileManager = FileManager.default
 let emojis = load()
+let bundle = Bundle.main
 var path: String {
-  return join(fileManager.currentDirectoryPath, "Resources/emoji.json")
+  return bundle.path(forResource: "emoij", ofType: "json")!
 }
 
 public extension String {
