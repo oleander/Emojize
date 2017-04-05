@@ -8,7 +8,7 @@ private typealias P<T> = Parser<Character, T>
 let emojis = load()
 let bundle = Bundle.main
 var path: String {
-  return bundle.path(forResource: "emoij", ofType: "json")!
+  return bundle.path(forResource: "emojl", ofType: "json")!
 }
 
 public extension String {
