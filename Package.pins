@@ -14,6 +14,18 @@
       "version": "2.0.5"
     },
     {
+      "package": "Nimble",
+      "reason": null,
+      "repositoryURL": "https://github.com/Quick/Nimble.git",
+      "version": "6.1.0"
+    },
+    {
+      "package": "Quick",
+      "reason": null,
+      "repositoryURL": "https://github.com/Quick/Quick.git",
+      "version": "1.1.0"
+    },
+    {
       "package": "SwiftyJSON",
       "reason": null,
       "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
