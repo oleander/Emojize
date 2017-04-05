@@ -1,4 +1,4 @@
-# Emojize [![Status](https://travis-ci.org/oleander/emojize.svg?branch=master)](https://travis-ci.org/oleander/emojize)
+# Emojize [![Status](https://travis-ci.org/oleander/Emoijze.svg?branch=master)](https://travis-ci.org/oleander/emojize)
 
 ## Usage
 
@@ -10,4 +10,4 @@ import Emojize
 
 ## Install
 
-Add `oleander/Emojize` to your `Package.swift` file or install it via CocoaPods
+Add `oleander/Emojize` to your `Package.swift` and run `swift build`.
