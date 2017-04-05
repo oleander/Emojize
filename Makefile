@@ -1,8 +1,8 @@
 run_test:
 	swift test --color always --parallel
 test: package run_test
-	mv Package.swift.back Package.swift
 	mv Package.swift .Package.test.swift
+	mv Package.swift.back Package.swift
 build:
 	swift build --color always
 tag:
