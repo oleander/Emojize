@@ -18,7 +18,11 @@ application_for :osx, 10.0 do |target|
 
     #Update these with the details of your app
     target.name = "Emojize"
-    target.all_configurations.each { |c| c.product_bundle_identifier = "com.yourcompany.yourapp"}
+    target.all_configurations.each do |c|
+        c.product_bundle_identifier = "com.yourcompany.yourapp"
+        c.settings["INFOPLIST_FILE"] = "Resources/Info.plist"
+        c.settings["SWIFT_VERSION"] = 3.1
+    end
 
     # Uncomment to target iPhone devices only
     #
@@ -48,7 +52,14 @@ application_for :osx, 10.0 do |target|
 
     # Comment to remove Unit Tests for your app
     #
-    unit_tests_for target
+    unit_tests_for target do |cc|
+        cc.name = "EmojizeTests"
+        cc.all_configurations.each do |c|
+            c.settings["INFOPLIST_FILE"] = "Resources/Info.plist"
+            c.settings["SWIFT_VERSION"] = 3.1
+        end
+        cc.include_files = ["Tests/*.*"]
+    end
 
     # Uncomment to create a Watch App for your application.
     #
