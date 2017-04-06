@@ -1,4 +1,5 @@
 target 'Emojize' do
+  pod "Emojize", path: Dir.pwd
   platform :osx, '10.10'
   use_frameworks!
 
