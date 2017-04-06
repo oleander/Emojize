@@ -1,6 +1,6 @@
 APP="Emojize"
-CONSTRUCT=xcodebuild -project $(APP).xcodeproj -scheme Emojize-Release clean
-CONSTRUCT2=xcodebuild -project $(APP).xcodeproj -scheme Emojize-Debug clean
+CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme Emojize-Release clean
+CONSTRUCT2=xcodebuild -workspace $(APP).xcworkspace -scheme Emojize-Release clean
 
 install_deps:
 	xcake make
