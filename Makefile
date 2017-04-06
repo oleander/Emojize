@@ -1,17 +1,14 @@
-run_test:
-	swift test --color always --parallel
-test: package run_test
-	mv Package.swift .Package.test.swift
-	mv Package.swift.back Package.swift
-build:
-	swift build --color always
-tag:
-	git tag $(version)
-	git push --tags
-	git push origin master
-release: tag
-package:
-	mv Package.swift Package.swift.back
-	mv .Package.test.swift Package.swift
-ci: package run_test
+APP="Emojize"
+CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP) clean
 
+install_deps:
+	pod install
+create_config:
+	swift package fetch
+	swift package generate-xcodeproj
+wipe:
+	rm -rf .build $(APP).xcodeproj $(APP).xcworkspace Package.pins Pods Podfile.lock
+test: wipe create_config install_deps
+	$(CONSTRUCT) test | xcpretty
+build: wipe create_config install_deps
+	$(CONSTRUCT) build | xcpretty
