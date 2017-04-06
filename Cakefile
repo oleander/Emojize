@@ -1,5 +1,5 @@
 # Change this to set a different Project file name
-#project.name = "Project"
+project.name = "Emojize"
 
 # Replace this with your class prefix for Objective-C files.
 project.class_prefix = "APP"
