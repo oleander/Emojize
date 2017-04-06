@@ -1,10 +1,10 @@
 APP="Emojize"
-CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme Emojize-Release clean
-CONSTRUCT2=xcodebuild -workspace $(APP).xcworkspace -scheme Emojize-Release clean
+CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme Emojize clean
+CONSTRUCT2=xcodebuild -workspace $(APP).xcworkspace -scheme Emojize clean
 
 install_deps:
-	xcake make
 	swift package fetch
+	swift package generate-xcodeproj
 	pod install
 create_config:
 	# swift test
