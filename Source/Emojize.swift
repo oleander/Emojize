@@ -42,18 +42,20 @@ var path: String {
   // let b = Bundle(for: AnyClass.self as! AnyClass)
 
   // return Bundle()
-  let bb = Bundle(identifier: "Hello")
-  let ii = bb?.paths(forResourcesOfType: nil, inDirectory: nil, forLocalization: nil)
+  return Bundle(identifier: "Emojize")!.path(forResource: "emoji", ofType: "json")!
+//  let ii = bb?.paths(forResourcesOfType: nil, inDirectory: nil, forLocalization: nil)
   // return b.path(forResource: "emoji", ofType: "json")!
-  dump(ii)
+  dump("xxxx")
+//  dump(ii)
   dump("kdkjsdlkfjsdlkfjlskdjfkjsf")
   for bundle in Bundle.allBundles {
 //    dump(bundle.)
     dump("---------")
+    dump(bundle)
     dump(bundle.paths(forResourcesOfType: nil, inDirectory: nil))
   }
-  // return Bundle.main.path(forResource: "emoji", ofType: "json")!
-  return "X"
+  return Bundle.main.path(forResource: "emoji", ofType: "json")!
+  // return "X"
 
   // return Bundle.bundleForClass()
 }
