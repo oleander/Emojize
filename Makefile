@@ -23,7 +23,7 @@ CONSTRUCT2=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)
 
 install_deps:
 	swift package generate-xcodeproj
-	pod install
+	pod install --repo-update
 create_config:
 	# swift package fetch
 wipe:
