@@ -34,5 +34,7 @@ wipe:
 # test: wipe install_deps
 test: wipe install_deps
 	$(CONSTRUCT2) test | xcpretty
-build: wipe create_config install_deps
+ci: install_deps
+	$(CONSTRUCT2) test
+build: wipe install_deps
 	$(CONSTRUCT) build | xcpretty
