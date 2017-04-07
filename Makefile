@@ -30,5 +30,5 @@ wipe:
 	rm -rf .build $(APP).xcodeproj $(APP).xcworkspace Package.pins Pods Podfile.lock Packages
 test: wipe install_deps
 	$(CONSTRUCT2) test | xcpretty
-build: wipe create_config install_deps
+build: # wipe create_config install_deps
 	$(CONSTRUCT) build | xcpretty
