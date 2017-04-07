@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'Emojize'
   # s.version      = `git describe --abbrev=0 --tags`.strip
-  s.version      = "4.0.1"
+  s.version      = "5.0.0"
   s.summary      = "Extension for Swift's String to convert Emoji Cheat Sheet codes into their Unicode equivalent"
   s.description = "Extension for Swift's String to convert Emoji Cheat Sheet codes into their Unicode equivalent."
   s.homepage     = 'https://github.com/oleander/Emoijze'
