@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.source = { git: 'https://github.com/oleander/Emoijze.git', tag: s.version.to_s }
   s.source_files = 'Source'
   s.resource = 'Resources/emoji.json'
-  s.prepare_command = "swift package fetch && swift package generate-xcodeproj"
+  s.prepare_command = "swift package clean && swift package fetch && swift package generate-xcodeproj"
 end
