@@ -18,8 +18,8 @@ APP="Emojize"
 # 	$(CONSTRUCT) build | xcpretty
 #
 # APP="MyApp"
-CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP) clean
-CONSTRUCT2=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)Tests clean
+CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)
+CONSTRUCT2=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)
 
 install_deps:
 	swift package generate-xcodeproj
