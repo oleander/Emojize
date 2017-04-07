@@ -30,7 +30,8 @@ wipe:
 	swift package reset
 	swift package clean
 	rm -rf .build $(APP).xcodeproj $(APP).xcworkspace Package.pins Pods Podfile.lock Packages
-	rm -fr /Users/oleander/Library/Developer/Xcode/DerivedData
+	rm -rf /Users/oleander/Library/Developer/Xcode/DerivedData
+# test: wipe install_deps
 test: wipe install_deps
 	$(CONSTRUCT2) test | xcpretty
 build: wipe create_config install_deps
