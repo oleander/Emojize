@@ -5,7 +5,7 @@ target 'Emojize' do
   pod 'SwiftyJSON', git: 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'Files', git: 'https://github.com/JohnSundell/Files.git'
   pod 'FootlessParser', git: 'https://github.com/oleander/FootlessParser.git'
-  pod 'Emojize', path: Dir.pwd
+  pod 'Emojize', path: File.dirname(__FILE__)
 
   platform :osx, '10.10'
 
