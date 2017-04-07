@@ -1,5 +1,5 @@
 PODS:
-  - Emojize (3.0.7)
+  - Emojize (3.0.8)
   - Files (1.6.2)
   - FootlessParser (2.0.6)
   - Nimble (6.1.0)
@@ -43,7 +43,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/oleander/SwiftyTimer.git
 
 SPEC CHECKSUMS:
-  Emojize: c0faa3be7d65072c5f8bf9379157bf99ba3ce4a1
+  Emojize: 4e9ecd5aa54646e6f94eab7ab5da4793cbfa0eda
   Files: aa5984c1b97c8ddc65680e77f28f11680a900869
   FootlessParser: aef8884544c638401bddaa5a4c61c09198c12d33
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
@@ -51,6 +51,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 05cf0e98a950e2ba343735264f5a96b81e755d00
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: da2eecae38bb3bf3e6369df08958d2338327f686
+PODFILE CHECKSUM: e1ff6bfff954ceb62af81f3b76e57efa5891fe0e
 
 COCOAPODS: 1.2.1.rc.1
