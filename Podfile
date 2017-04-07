@@ -6,7 +6,7 @@ target 'Emojize' do
   pod 'SwiftyJSON', git: 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'Files', git: 'https://github.com/JohnSundell/Files.git'
   pod 'FootlessParser', git: 'https://github.com/oleander/FootlessParser.git'
-  pod 'Emojize', path: File.dirname(__FILE__)
+  pod 'Emojize', podspec: File.join(File.dirname(__FILE__), "Emojize.podspec")
 
   target 'EmojizeTests' do
     inherit! :search_paths
