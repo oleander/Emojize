@@ -7,9 +7,9 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author = { 'Linus Oleander' => 'linus@oleander.io' }
   s.platform = :osx, '10.10'
-  s.osx.deployment_target = '10.10'
+  # s.osx.deployment_target = '10.10'
   s.source = { git: 'https://github.com/oleander/Emoijze.git', tag: s.version.to_s }
-  s.source_files = 'Source'
+  # s.source_files = 'Source'
   s.resource = 'Resources/emoji.json'
-  s.prepare_command = "swift package clean && swift package fetch && swift package generate-xcodeproj"
+  # s.prepare_command = "swift package clean && swift package fetch && swift package generate-xcodeproj"
 end

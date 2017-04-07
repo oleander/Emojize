@@ -22,12 +22,13 @@ CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP) clean
 CONSTRUCT2=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)Tests clean
 
 install_deps:
-	# swift package generate-xcodeproj
+	swift package generate-xcodeproj
 	pod install
 create_config:
 	# swift package fetch
 wipe:
 	rm -rf .build $(APP).xcodeproj $(APP).xcworkspace Package.pins Pods Podfile.lock Packages
+	rm -r /Users/oleander/Library/Developer/Xcode/DerivedData
 test: wipe install_deps
 	$(CONSTRUCT2) test | xcpretty
 build: wipe create_config install_deps
