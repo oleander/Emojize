@@ -5,59 +5,8 @@ import Files
 
 private typealias P<T> = Parser<Character, T>
 
-// let bundle = Bundle.main
-// var path: String {
-//   return Bundle.main.path(forResource: "emoji", ofType: "json")!
-// }
-
-func recursivePathsForResources(type: String)  {
-  // Get the document directory url
-  // let documentsUrl =  FileManager.default.urls(for: Bundle.main, in: .userDomainMask).first!
-  //
-  // do {
-  //   // Get the directory contents urls (including subfolders urls)
-  //   let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: [])
-  //   print(directoryContents)
-  //
-  //   // if you want to filter the directory contents you can do like this:
-  //   let mp3Files = directoryContents.filter{ $0.pathExtension == "json" }
-  //   print("mp3 urls:",mp3Files)
-  //   let mp3FileNames = mp3Files.map{ $0.deletingPathExtension().lastPathComponent }
-  //   print("mp3 list:", mp3FileNames)
-  //
-  // } catch let error as NSError {
-  //   print(error.localizedDescription)
-  // }
-
-  dump(Bundle.main.paths(forResourcesOfType: nil, inDirectory: "."))
-}
-
-class Hello {
-
-}
 var path: String {
-  recursivePathsForResources(type: "json")
-  // return Bundle(bundleForClass: Hello.self)
-//  let b = Bundle(for: Emojize)
-  // let b = Bundle(for: AnyClass.self as! AnyClass)
-
-  // return Bundle()
   return Bundle(identifier: "Emojize")!.path(forResource: "emoji", ofType: "json")!
-//  let ii = bb?.paths(forResourcesOfType: nil, inDirectory: nil, forLocalization: nil)
-  // return b.path(forResource: "emoji", ofType: "json")!
-  dump("xxxx")
-//  dump(ii)
-  dump("kdkjsdlkfjsdlkfjlskdjfkjsf")
-  for bundle in Bundle.allBundles {
-//    dump(bundle.)
-    dump("---------")
-    dump(bundle)
-    dump(bundle.paths(forResourcesOfType: nil, inDirectory: nil))
-  }
-  return Bundle.main.path(forResource: "emoji", ofType: "json")!
-  // return "X"
-
-  // return Bundle.bundleForClass()
 }
 
 let emojis = load()
