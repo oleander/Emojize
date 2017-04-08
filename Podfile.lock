@@ -1,5 +1,9 @@
 PODS:
-  - Emojize (5.0.1)
+  - Emojize (5.0.2):
+    - Files
+    - FootlessParser
+    - SwiftyJSON
+    - SwiftyTimer
   - Files (1.6.2)
   - FootlessParser (2.0.6)
   - Nimble (6.1.0)
@@ -8,7 +12,7 @@ PODS:
   - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
-  - Emojize (from `/Users/oleander/Documents/Projekt/emojize/Emojize.podspec`)
+  - Emojize (from `/Users/oleander/Documents/Projekt/emojize`)
   - Files (from `https://github.com/JohnSundell/Files.git`)
   - FootlessParser (from `https://github.com/oleander/FootlessParser.git`)
   - Nimble
@@ -18,7 +22,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Emojize:
-    :podspec: "/Users/oleander/Documents/Projekt/emojize/Emojize.podspec"
+    :path: "/Users/oleander/Documents/Projekt/emojize"
   Files:
     :git: https://github.com/JohnSundell/Files.git
   FootlessParser:
@@ -43,7 +47,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/oleander/SwiftyTimer.git
 
 SPEC CHECKSUMS:
-  Emojize: 8e88c653ac18a366efa8b293207057d13521426a
+  Emojize: c10dbc308b22b9493312a54ca2f1a4ef07096647
   Files: aa5984c1b97c8ddc65680e77f28f11680a900869
   FootlessParser: aef8884544c638401bddaa5a4c61c09198c12d33
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
@@ -51,6 +55,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 05cf0e98a950e2ba343735264f5a96b81e755d00
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: 03ea9d7a710d7be6720112d9cbdde2e6374de22e
+PODFILE CHECKSUM: be8316abda9033948ab4ecf226bab9df6482cf44
 
 COCOAPODS: 1.2.1.rc.1
