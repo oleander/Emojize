@@ -13,48 +13,22 @@ PODS:
 
 DEPENDENCIES:
   - Emojize (from `/Users/oleander/Documents/Projekt/emojize`)
-  - Files (from `https://github.com/JohnSundell/Files.git`)
-  - FootlessParser (from `https://github.com/oleander/FootlessParser.git`)
   - Nimble
   - Quick
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-  - SwiftyTimer (from `https://github.com/oleander/SwiftyTimer.git`)
 
 EXTERNAL SOURCES:
   Emojize:
     :path: "/Users/oleander/Documents/Projekt/emojize"
-  Files:
-    :git: https://github.com/JohnSundell/Files.git
-  FootlessParser:
-    :git: https://github.com/oleander/FootlessParser.git
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-  SwiftyTimer:
-    :git: https://github.com/oleander/SwiftyTimer.git
-
-CHECKOUT OPTIONS:
-  Files:
-    :commit: e342da619507419503a815cd70c57505a841bcdd
-    :git: https://github.com/JohnSundell/Files.git
-  FootlessParser:
-    :commit: 1fb6a16762117b45cfafe2cc8ac04c6bcbdb3b64
-    :git: https://github.com/oleander/FootlessParser.git
-  SwiftyJSON:
-    :commit: 74cda0fa5ae0be109b60a7dad396bcf92a9d5a13
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-  SwiftyTimer:
-    :commit: 77325e642504ccf1d1dde022da35c384764958e7
-    :git: https://github.com/oleander/SwiftyTimer.git
 
 SPEC CHECKSUMS:
   Emojize: c10dbc308b22b9493312a54ca2f1a4ef07096647
-  Files: aa5984c1b97c8ddc65680e77f28f11680a900869
-  FootlessParser: aef8884544c638401bddaa5a4c61c09198c12d33
+  Files: d9733409575a7e49866ed41535abd7116450087f
+  FootlessParser: b398f10654ea8aab5305ca0f9025c9b25a8a2562
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  SwiftyJSON: 05cf0e98a950e2ba343735264f5a96b81e755d00
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: be8316abda9033948ab4ecf226bab9df6482cf44
+PODFILE CHECKSUM: 0aea5b72b644eecac02a90f9bb671e16bc53a5fb
 
 COCOAPODS: 1.2.1.rc.1
