@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Emojize:
-    :commit: e0cc6fd782f9f0c8d777e8b5b975fa440352e41a
+    :commit: c62ec78e80f88637314f69846ac7fe047aa2e06a
     :git: "/Users/oleander/Documents/Projekt/emojize/.git"
 
 SPEC CHECKSUMS:
