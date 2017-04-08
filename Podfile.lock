@@ -12,13 +12,18 @@ PODS:
   - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
-  - Emojize (from `/Users/oleander/Documents/Projekt/emojize`)
+  - Emojize (from `/Users/oleander/Documents/Projekt/emojize/.git`)
   - Nimble
   - Quick
 
 EXTERNAL SOURCES:
   Emojize:
-    :path: "/Users/oleander/Documents/Projekt/emojize"
+    :git: "/Users/oleander/Documents/Projekt/emojize/.git"
+
+CHECKOUT OPTIONS:
+  Emojize:
+    :commit: e0cc6fd782f9f0c8d777e8b5b975fa440352e41a
+    :git: "/Users/oleander/Documents/Projekt/emojize/.git"
 
 SPEC CHECKSUMS:
   Emojize: 77753e60fb47c8bb2e5c534d6e2a262cdd7b7aaf
@@ -29,6 +34,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: 11db0c744cc690ed1c031bc67c0887bf8ef44024
+PODFILE CHECKSUM: 9daf91b9dd7864326c67ad624ce0fd8b6f451094
 
 COCOAPODS: 1.2.1.rc.1
