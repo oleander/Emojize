@@ -6,7 +6,7 @@ import Files
 private typealias P<T> = Parser<Character, T>
 
 var path: String {
-  return Bundle(identifier: "Emojize")!.path(forResource: "emoji", ofType: "json")!
+  return Bundle.main.path(forResource: "emoji", ofType: "json")!
 }
 
 let emojis = load()
