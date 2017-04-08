@@ -10,7 +10,7 @@ wipe:
 	rm -rf .build $(APP).xcodeproj $(APP).xcworkspace Package.pins Pods Podfile.lock Packages
 	rm -rf /Users/oleander/Library/Developer/Xcode/DerivedData
 test: wipe install_deps
-	$(CONSTRUCT) test | xcpretty
+	xcodebuild -workspace Emojize.xcworkspace -scheme EmojizeTests test | xcpretty
 ci: install_deps
 	$(CONSTRUCT) test
 build: wipe install_deps
