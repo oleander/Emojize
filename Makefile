@@ -1,4 +1,4 @@
-APP="Emojize"
+APP=Emojize
 CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)
 
 install_deps:

@@ -3,9 +3,9 @@
 import PackageDescription
 
 let package = Package(
-  name: "Emojize",
-  targets: [
-    Target(name: "Emojize"),
-    Target(name: "EmojizeTests", dependencies: ["Emojize"])
-  ]
+  name: "Emojize"
+  // targets: [
+  //   Target(name: "Emojize"),
+  //   Target(name: "EmojizeTests", dependencies: ["Emojize"])
+  // ]
 )
