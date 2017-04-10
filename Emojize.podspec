@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform = :osx, '10.10'
   s.source = { git: 'https://github.com/oleander/Emoijze.git', tag: s.version.to_s }
   s.resources = ['Resources/emoji.json']
-  s.source_files = 'Emoijze/*.swift'
+  s.source_files = 'Emojize/*.swift'
   s.dependency "SwiftyJSON"
   s.dependency "FootlessParser"
   s.dependency 'SwiftyTimer'
