@@ -6,8 +6,6 @@ import Files
 private typealias P<T> = Parser<Character, T>
 
 var path: String {
-  print("IIIIIII")
-  
   return Bundle(for: type(of: Xa())).path(forResource: nil, ofType: "json")!
 }
 
@@ -24,14 +22,6 @@ public extension String {
 
 private func parser(replace: @escaping (String) -> String?) -> P<String> {
   func merge(pre: String, item: String, post: String) -> String {
-    print("AAAAAAA")
-    for x in Bundle.allBundles {
-      dump(x.paths(forResourcesOfType: "json", inDirectory: "Resouces"))
-//      print(x)
-      print("allBundlesallBundlesallBundlesallBundles")
-    }
-
-
     guard let result = replace(item) else {
       return pre + ":" + item + ":" + post
     }
