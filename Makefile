@@ -1,14 +1,10 @@
-test:
-	swift test --color always --parallel
-build:
-	swift build --color always
-tag:
-	git tag $(version)
-	git push --tags
-	git push origin master
-release: tag
-package:
-	rm Package.swift
-	mv .Package.test.swift Package.swift
-ci: package test
+APP=Emojize
+CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)
 
+install_deps:
+	pod install --verbose
+test: install_deps plain_test
+build: install_deps
+	$(CONSTRUCT) build | xcpretty
+plain_test:
+	/usr/bin/xcodebuild -workspace Emojize.xcworkspace -scheme Emojize test

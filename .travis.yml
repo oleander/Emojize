@@ -1,3 +1,6 @@
 language: objective-c
 osx_image: xcode8.3
-script: make ci
+install: gem install cocoapods --pre
+script:
+  - make test
+  - pod lib lint
