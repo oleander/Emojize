@@ -3,9 +3,7 @@ CONSTRUCT=xcodebuild -workspace $(APP).xcworkspace -scheme $(APP)
 
 install_deps:
 	pod install --verbose
-test: wipe install_deps plain_test
-	ci: install_deps
-	$(CONSTRUCT) test
+test: install_deps plain_test
 build: install_deps
 	$(CONSTRUCT) build | xcpretty
 plain_test:
