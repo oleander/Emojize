@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  Emojize: bbf421d8c3eb3110d77fd1829e42bd001a3ec04d
+  Emojize: dfbb4ecaf7f492309d14e790c417386c22bd34ae
   Files: d9733409575a7e49866ed41535abd7116450087f
   FootlessParser: b398f10654ea8aab5305ca0f9025c9b25a8a2562
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
