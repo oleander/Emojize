@@ -10,4 +10,4 @@ import Emojize
 
 ## Install
 
-Add `oleander/Emojize` to your `Package.swift` and run `swift build`.
+Add `pod 'Emojize'` to your `Podfile` and run `pod install`.
