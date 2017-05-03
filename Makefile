@@ -1,5 +1,5 @@
 test:
 	pod install --verbose --repo-update
-	xcodebuild -workspace Emojize.xcworkspace -scheme Emojize clean test | xcpretty
+	fastlane scan --scheme Emojize
 lint:
 	pod lib lint

@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode8.3
-install: gem install cocoapods xcpretty --pre
+install: gem install cocoapods xcpretty fastlane --pre
 script: make test lint

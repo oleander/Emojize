@@ -21,6 +21,7 @@ extension NSMutableAttributedString: Collection {
   }
 
   public subscript(position: Int) -> AttrElem {
+    if length == 0 { return AttrElem(string: "") }
     return AttrElem(attr: attributedSubstring(from: NSRange(location: position, length: 1)))
   }
 
