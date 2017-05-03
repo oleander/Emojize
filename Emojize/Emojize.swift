@@ -3,44 +3,68 @@ import FootlessParser
 import AppKit
 import Files
 
-private typealias P<T> = Parser<Character, T>
+internal class Nothing {}
+
+private typealias P<T> = Parser<AttrElem, T>
+private typealias Elem = Match<AttrElem>
+private let emojis = load()
+private let data: P<Elem> = Match.data <^> til([AttrElem(string: ":")])
+private let colon: P<Elem> = pure(Match.colon) <* oneOf(Attr(string: ":"))
+internal let pparser = parser(forChar)
 
 var path: String {
   return Bundle(for: type(of: Nothing()))
     .path(forResource: "emoji", ofType: "json")!
 }
 
-let emojis = load()
-public extension String {
-  public func emojifyed() -> String {
-    do {
-      return try parse(parser(replace: forChar), self)
-    } catch (_) {
-      return self
+private func parser(_ replace: @escaping (String) -> String?) -> P<Attr> {
+  return { process($0, replace) } <^> zeroOrMore(data <|> colon)
+}
+
+private func reduce(array: [AttrElem]) -> AttrElem {
+  return array.reduce(AttrElem(string: "")) { $0 + $1 }
+}
+
+private func iterator(_ ma: [Elem], block: (Elem, Elem, Elem) -> State) -> [Elem] {
+  if ma.count < 3 { return ma }
+  switch block(ma[0], ma[1], ma[2]) {
+  case let .hit(attr):
+    return [attr] + iterator(from(for: ma, from: 3), block: block)
+  case .miss:
+    return [ma[0]] + iterator(from(for: ma, from: 1), block: block)
+  }
+}
+
+private func from(for array: [Elem], from: Int) -> [Elem] {
+  return array.enumerated().reduce([]) { acc, el in
+    if el.0 >= from { return acc + [el.1] }
+    return acc
+  }
+}
+
+private func process(_ ma: [Elem], _ replace: @escaping (String) -> String?) -> Attr {
+  return iterator(ma) { a, b, c in
+    switch (a, b, c) {
+    case let (.colon, .data(data), .colon):
+      if let more = replace(data.string) {
+        return .hit(.data(AttrElem(string: more)))
+      }
+      return .miss
+    default:
+      return .miss
+    }
+  }.reduce(Attr(string: "")) { acc, el in
+    switch el {
+    case let .data(data):
+      return acc + data
+    case .colon:
+      return acc + ":"
     }
   }
 }
 
-private func parser(replace: @escaping (String) -> String?) -> P<String> {
-  func merge(pre: String, item: String, post: String) -> String {
-    guard let result = replace(item) else {
-      return pre + ":" + item + ":" + post
-    }
-
-    return pre + result + post
-  }
-
-  let emojize =
-    curry(merge) <^>
-    (til([":"]) <* string(":")) <*>
-    (til([":"]) <* string(":")) <*>
-    til([":"])
-  let parser: P<[String]> = zeroOrMore(emojize)
-  return curry({ $0.joined() + $1 }) <^> parser <*> zeroOrMore(any())
-}
-
-private func til(_ values: [String], empty: Bool = true) -> P<String> {
-  return zeroOrMore(noneOf(values))
+private func til(_ values: [AttrElem], empty: Bool = true) -> P<AttrElem> {
+  return reduce <^> oneOrMore(noneOf(values))
 }
 
 private func join(_ paths: String...) -> String {

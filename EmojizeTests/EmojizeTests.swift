@@ -5,7 +5,9 @@ import Nimble
 class EmojizeTests: QuickSpec {
   override func spec() {
     let check = { (_ input: String, block: @escaping (String) -> Void) in
-      block(input.emojifyed())
+      block(input.emojified)
+      block(NSMutableAttributedString(string: input).emojified.string)
+      block(NSAttributedString(string: input).emojified.string)
     }
 
     it("doesn't alter regular strings") {
@@ -17,6 +19,18 @@ class EmojizeTests: QuickSpec {
     it("handles empty strings") {
       check("") {
         expect($0).to(equal(""))
+      }
+    }
+
+    it("handles only one :") {
+      check(":") {
+        expect($0).to(equal(":"))
+      }
+    }
+
+    it("handles half open :") {
+      check(":xxx") {
+        expect($0).to(equal(":xxx"))
       }
     }
 
@@ -53,6 +67,12 @@ class EmojizeTests: QuickSpec {
     it("handles non closed tags") {
       check("ABC :car: DEF : XYZ") {
         expect($0).to(equal("ABC 🚗 DEF : XYZ"))
+      }
+    }
+
+    it("handles (ending) non closed tags") {
+      check("ABC :house: DEF : XYZ :car:") {
+        expect($0).to(equal("ABC 🏠 DEF : XYZ 🚗"))
       }
     }
   }
