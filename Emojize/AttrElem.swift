@@ -9,7 +9,7 @@ public struct AttrElem: Equatable, CustomStringConvertible {
   }
 
   init(string: String) {
-    self.init(attr: Mute(string: string))
+    self.init(attr: Mute(withDefaultFont: string))
   }
 
   init(attr: Mute) {

@@ -9,7 +9,7 @@ private typealias P<T> = Parser<AttrElem, T>
 private typealias Elem = Match<AttrElem>
 private let emojis = load()
 private let data: P<Elem> = Match.data <^> til([AttrElem(string: ":")])
-private let colon: P<Elem> = pure(Match.colon) <* oneOf(Attr(string: ":"))
+private let colon: P<Elem> = pure(Match.colon) <* oneOf(Attr(withDefaultFont: ":"))
 internal let pparser = parser(forChar)
 
 var path: String {
@@ -53,7 +53,7 @@ private func process(_ ma: [Elem], _ replace: @escaping (String) -> String?) -> 
     default:
       return .miss
     }
-  }.reduce(Attr(string: "")) { acc, el in
+  }.reduce(Attr(withDefaultFont: "")) { acc, el in
     switch el {
     case let .data(data):
       return acc + data

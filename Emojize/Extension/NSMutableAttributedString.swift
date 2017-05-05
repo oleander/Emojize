@@ -1,15 +1,23 @@
 import Foundation
+import AppKit
 
 public typealias Attr = NSMutableAttributedString
 public typealias Mute = NSMutableAttributedString
 
 extension NSMutableAttributedString: Collection {
+  private static var defaultFont: NSFont {
+    return NSFont.menuBarFont(ofSize: 0)
+  }
   convenience init(attr: NSAttributedString) {
     self.init(attributedString: attr)
   }
 
+  convenience init(withDefaultFont string: String) {
+    self.init(string: string, attributes: [NSFontAttributeName: Mute.defaultFont])
+  }
+
   public static func + (lhs: Mute, rhs: String) -> Mute {
-    return lhs + Mute(string: rhs)
+    return lhs + Mute(withDefaultFont: rhs)
   }
 
   public static func + (lhs: String, rhs: Mute) -> Mute {
