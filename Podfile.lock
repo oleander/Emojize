@@ -1,31 +1,24 @@
 PODS:
-  - Emojize (6.0.9):
-    - Files
-    - FootlessParser
-    - SwiftyJSON
-  - Files (1.6.2)
+  - Files (1.8.0)
   - FootlessParser (2.0.6)
   - Nimble (6.1.0)
   - Quick (1.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - Emojize (from `.`)
+  - Files
+  - FootlessParser
   - Nimble
   - Quick
-
-EXTERNAL SOURCES:
-  Emojize:
-    :path: "."
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Emojize: 90507c5c64102b38f899d2402c6b9f576e5ae7df
-  Files: d9733409575a7e49866ed41535abd7116450087f
+  Files: b7734dc3136d4f75e3a98c0b6140bc671ec863ae
   FootlessParser: b398f10654ea8aab5305ca0f9025c9b25a8a2562
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 11a11e9c0fec784cab29f725a4e40af43dc4e9c0
+PODFILE CHECKSUM: c8a6172b75cef558ce65961d09230f3ab703020f
 
 COCOAPODS: 1.2.1
