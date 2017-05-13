@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = 'Emojize'
-  s.version      = '6.0.8'
-  s.summary      = "Extension for Swift's String to convert Emoji Cheat Sheet codes into their Unicode equivalent"
-  s.description = "Extension for Swift's String to convert Emoji Cheat Sheet codes into their Unicode equivalent."
+  s.version      = '6.0.9'
+  s.summary      = "Swift 3 emoji parser for String, NSAttributedString and NSMutableAttributedString."
+  s.description = "Swift 3 emoji parser for String, NSAttributedString and NSMutableAttributedString. It replaces sub strings on the form :emoji: with its corresponding emoji character. The emoji lookup table is taken from github/gemoji."
   s.homepage     = 'https://github.com/oleander/Emojize'
   s.license      = 'MIT'
   s.author = { 'Linus Oleander' => 'linus@oleander.io' }
@@ -12,6 +12,5 @@ Pod::Spec.new do |s|
   s.source_files = 'Emojize/**/*.swift'
   s.dependency 'SwiftyJSON'
   s.dependency 'Files'
-  s.dependency 'FootlessParser'
   s.dependency 'FootlessParser'
 end

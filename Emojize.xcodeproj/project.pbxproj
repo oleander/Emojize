@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		018106554E83F661D50789BF /* Pods_EmojizeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEF0603BD2509730A875B52 /* Pods_EmojizeTests.framework */; };
+		205F26741EC795D6009EA7A9 /* Ext.Replaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F26731EC795D6009EA7A9 /* Ext.Replaceable.swift */; };
 		2070A9401E9C267B00107596 /* Emojize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070A93E1E9C267B00107596 /* Emojize.swift */; };
 		20915D121E9C227B005C3830 /* Emojize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20915D081E9C227B005C3830 /* Emojize.framework */; };
 		20915D171E9C227B005C3830 /* EmojizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20915D161E9C227B005C3830 /* EmojizeTests.swift */; };
 		20964BF81E9E419600A72486 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 20964BF71E9E419600A72486 /* emoji.json */; };
-		209FB3691EBA635D003DFBCC /* AttrElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209FB3671EBA635D003DFBCC /* AttrElem.swift */; };
-		209FB36A1EBA635D003DFBCC /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209FB3681EBA635D003DFBCC /* Match.swift */; };
-		209FB36D1EBA6365003DFBCC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209FB36B1EBA6365003DFBCC /* Array.swift */; };
 		209FB36E1EBA6365003DFBCC /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209FB36C1EBA6365003DFBCC /* NSMutableAttributedString.swift */; };
-		20D9EDEB1EB9EFC100BBA915 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D9EDE81EB9EFC100BBA915 /* State.swift */; };
+		20A6B8A11EC78D8100D783B4 /* Replaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6B8A01EC78D8100D783B4 /* Replaceable.swift */; };
+		20A6B8A51EC78D9300D783B4 /* NSMutableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6B8A41EC78D9300D783B4 /* NSMutableString.swift */; };
+		20A6B8A91EC78D9F00D783B4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6B8A81EC78D9F00D783B4 /* Item.swift */; };
 		20E13AB31EB9F4FC004B7A42 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E13AB21EB9F4FC004B7A42 /* NSAttributedString.swift */; };
 		20E13AB51EB9F501004B7A42 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E13AB41EB9F501004B7A42 /* String.swift */; };
 		26B6BC3CDC35CD4E6C9AFF55 /* Pods_Emojize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD504AA8962C530804BDE20 /* Pods_Emojize.framework */; };
@@ -33,17 +33,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		205F26731EC795D6009EA7A9 /* Ext.Replaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ext.Replaceable.swift; path = Extension/Ext.Replaceable.swift; sourceTree = "<group>"; };
 		2070A93E1E9C267B00107596 /* Emojize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojize.swift; sourceTree = "<group>"; };
 		20915D081E9C227B005C3830 /* Emojize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Emojize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20915D111E9C227B005C3830 /* EmojizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20915D161E9C227B005C3830 /* EmojizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojizeTests.swift; sourceTree = "<group>"; };
 		20915D181E9C227B005C3830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20964BF71E9E419600A72486 /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji.json; path = Resources/emoji.json; sourceTree = "<group>"; };
-		209FB3671EBA635D003DFBCC /* AttrElem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttrElem.swift; sourceTree = "<group>"; };
-		209FB3681EBA635D003DFBCC /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
-		209FB36B1EBA6365003DFBCC /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Extension/Array.swift; sourceTree = "<group>"; };
 		209FB36C1EBA6365003DFBCC /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSMutableAttributedString.swift; path = Extension/NSMutableAttributedString.swift; sourceTree = "<group>"; };
-		20D9EDE81EB9EFC100BBA915 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		20A6B8A01EC78D8100D783B4 /* Replaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Replaceable.swift; path = Protocol/Replaceable.swift; sourceTree = "<group>"; };
+		20A6B8A41EC78D9300D783B4 /* NSMutableString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSMutableString.swift; path = Extension/NSMutableString.swift; sourceTree = "<group>"; };
+		20A6B8A81EC78D9F00D783B4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		20E13AB21EB9F4FC004B7A42 /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSAttributedString.swift; path = Extension/NSAttributedString.swift; sourceTree = "<group>"; };
 		20E13AB41EB9F501004B7A42 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Extension/String.swift; sourceTree = "<group>"; };
 		342100F5895CF03B754EB649 /* Pods-Emojize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojize.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emojize/Pods-Emojize.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,14 +99,10 @@
 		20915D0A1E9C227B005C3830 /* Emojize */ = {
 			isa = PBXGroup;
 			children = (
-				209FB36B1EBA6365003DFBCC /* Array.swift */,
-				209FB36C1EBA6365003DFBCC /* NSMutableAttributedString.swift */,
-				209FB3671EBA635D003DFBCC /* AttrElem.swift */,
-				209FB3681EBA635D003DFBCC /* Match.swift */,
-				20E13AB41EB9F501004B7A42 /* String.swift */,
-				20E13AB21EB9F4FC004B7A42 /* NSAttributedString.swift */,
-				20D9EDE81EB9EFC100BBA915 /* State.swift */,
+				20A6B89F1EC78D6900D783B4 /* Extension */,
+				20A6B89E1EC78D6300D783B4 /* Protocol */,
 				2070A93E1E9C267B00107596 /* Emojize.swift */,
+				20A6B8A81EC78D9F00D783B4 /* Item.swift */,
 			);
 			path = Emojize;
 			sourceTree = "<group>";
@@ -126,6 +122,26 @@
 				20964BF71E9E419600A72486 /* emoji.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		20A6B89E1EC78D6300D783B4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				20A6B8A01EC78D8100D783B4 /* Replaceable.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		20A6B89F1EC78D6900D783B4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				20A6B8A41EC78D9300D783B4 /* NSMutableString.swift */,
+				209FB36C1EBA6365003DFBCC /* NSMutableAttributedString.swift */,
+				20E13AB41EB9F501004B7A42 /* String.swift */,
+				20E13AB21EB9F4FC004B7A42 /* NSAttributedString.swift */,
+				205F26731EC795D6009EA7A9 /* Ext.Replaceable.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		2580C9DE82A587F883A8173D /* Frameworks */ = {
@@ -341,14 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A6B8A11EC78D8100D783B4 /* Replaceable.swift in Sources */,
+				20A6B8A91EC78D9F00D783B4 /* Item.swift in Sources */,
 				209FB36E1EBA6365003DFBCC /* NSMutableAttributedString.swift in Sources */,
+				205F26741EC795D6009EA7A9 /* Ext.Replaceable.swift in Sources */,
 				20E13AB51EB9F501004B7A42 /* String.swift in Sources */,
-				209FB36D1EBA6365003DFBCC /* Array.swift in Sources */,
-				209FB36A1EBA635D003DFBCC /* Match.swift in Sources */,
+				20A6B8A51EC78D9300D783B4 /* NSMutableString.swift in Sources */,
 				2070A9401E9C267B00107596 /* Emojize.swift in Sources */,
 				20E13AB31EB9F4FC004B7A42 /* NSAttributedString.swift in Sources */,
-				20D9EDEB1EB9EFC100BBA915 /* State.swift in Sources */,
-				209FB3691EBA635D003DFBCC /* AttrElem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

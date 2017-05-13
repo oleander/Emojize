@@ -1,5 +1,5 @@
 PODS:
-  - Emojize (6.0.7):
+  - Emojize (6.0.9):
     - Files
     - FootlessParser
     - SwiftyJSON
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  Emojize: 8937d486b6bfd556b6d23154c64038bce49057ce
+  Emojize: 90507c5c64102b38f899d2402c6b9f576e5ae7df
   Files: d9733409575a7e49866ed41535abd7116450087f
   FootlessParser: b398f10654ea8aab5305ca0f9025c9b25a8a2562
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
