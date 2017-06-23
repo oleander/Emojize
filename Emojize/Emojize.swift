@@ -1,17 +1,16 @@
-import SwiftyJSON
+import JASON
 import Foundation
 import FootlessParser
 import AppKit
-import Files
 
 typealias Hit = (Character, NSRange)
 typealias Output = (Int, [Hit])
 internal class Nothing {}
 private let emojis = prefetchedEmojis
 
-var path: String {
+var path: URL {
   return Bundle(for: type(of: Nothing()))
-    .path(forResource: "emoji", ofType: "json")!
+    .url(forResource: "emoji", withExtension: "json")!
 }
 
 func process<T: Replaceable>(_ item: T) -> T {
@@ -23,24 +22,20 @@ func process<T: Replaceable>(_ item: T) -> T {
   return item
 }
 
-var rawData: Data? {
+var rawData: String? {
   do {
-    return try Files.File(path: path).read()
+    return try String(contentsOf: path, encoding: .utf8)
   } catch {
     return nil
   }
 }
 
 var prefetchedEmojis: [String: Character] {
-  guard let data = rawData else {
-    return [:]
-  }
-
-  let emojis = JSON(data: data)
+  let emojis = JSON(rawData)
   var replacements = [String: Character]()
 
-  for emojize in emojis.arrayValue {
-    for name in emojize["short_names"].arrayValue {
+  for emojize in emojis.jsonArray ?? [] {
+    for name in emojize["short_names"].jsonArray ?? [] {
       guard let hex = emojize["unified"].string else {
         continue
       }
